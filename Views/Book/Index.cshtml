@@ -1,0 +1,33 @@
+﻿@model List<MVCBookMgtSystem.Models.Domain.Book>
+
+@{
+}
+
+<h1  class="text-center text-primary"><b>Book Records</b></h1>
+<a class="btn btn-success m-1" asp-controller="Book" asp-action="Add">Add Book</a>
+<table class="table table-bordered">
+    <thead>
+        <tr> 
+            <th>BookId</th>
+            <th>Title</th>
+            <th>Author</th>
+            <th>Publisher</th>
+            <th>YearPublished</th>
+            <th>UpdateAction</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var book in Model)
+        {
+            <tr>
+                <td>@book.BookId</td>
+                <td>@book.Title</td>
+                <td>@book.Author</td>
+                <td>@book.Publisher</td>
+                <td>@book.YearPublished</td>
+                <td><a class="btn btn-warning" href="Book/Update/@book.BookId"><b>Update</b></a></td>
+            </tr>
+        }
+    </tbody>
+
+</table>

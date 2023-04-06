@@ -1,0 +1,30 @@
+﻿@model MVCBookMgtSystem.Models.AddViewModels
+
+@{
+}
+
+<div class="card">
+    <div class="card-header">
+        <h1 class="text-center text-primary"><b>Add Book</b></h1>
+        <form method="post" action="Add">         
+            <div class="mb-3">
+                <label  for="" class="form-label">Title</label>
+                <input type="text" class="form-control" asp-for="Title" placeholder="Enter a title" />
+            </div>
+            <div class="mb-3">
+                <label for="" class="form-label">Author</label>
+                <input type="text" class="form-control" asp-for="Author" placeholder="Enter an author" />
+            </div>
+            <div class="mb-3">
+                <label for="" class="form-label">Publisher</label>
+                <input type="text" class="form-control" asp-for="Publisher" placeholder="Enter publisher" />
+            </div>
+            <div class="mb-3">
+                <label for="" class="form-label">YearPublished</label>
+                <input type="date" class="form-control" asp-for="YearPublished" placeholder="Enter publisher" />
+            </div>
+
+             <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+</div>
